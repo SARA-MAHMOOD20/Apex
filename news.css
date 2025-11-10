@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(189, 185, 185); */
+    font-family: "Press Start 2P";
+    background-color: rgb(16, 15, 15);
+    color: aliceblue;
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(144, 137, 150); */
+}
+
+/* NAVBAR */
+
+.nav{
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    gap: 20rem;
+    padding: 15px 0;
+    height: 8%;
+    /* position: fixed; */
+}
+.nav .navs{
+    /* background-color: purple; */
+}
+.nav .navs a{
+    margin-right: 3rem;
+    text-decoration: none;
+    color: inherit;
+}
+.nav .navs a:hover,.logo h2:hover{
+    color:red;
+    transform: translateY(-4px);
+    transition: transform 220ms ease, color 180ms ease, text-shadow 220ms ease, letter-spacing 180ms ease;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+/* underline base (hidden) */
+.nav .navs a::after,
+.logo h2::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: red;
+  transition: width 220ms ease;
+  border-radius: 2px;
+}
+
+/* reveal underline on hover */
+.nav .navs a:hover::after,
+.logo h2:hover::after{
+  width: 100%;
+}
+
+
+.logo{
+
+}
+
+/* VIEDO */
+
+.video{
+    height: 92%;
+    width: 100%;
+    /* background-color: rgb(0, 104, 104); */
+    position: relative;
+}
+
+/* Video sizing */
+.video .game{
+    height: 100%;
+    width: 100%;
+}
+.video .game video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* overlay */
+
+.overlay{
+    position: absolute;
+    bottom: 17rem;
+    left:21%
+}
+
+.over1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    
+    /* background-color: burlywood;  */
+
+}
+.overlay .over1 h1{
+    font-size: 4rem;
+    cursor: pointer;
+    
+}
+.overlay .over1 h1:hover{
+    color: red;
+}
+.scroll{
+    /* background-color: pink; */
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 5rem;
+    flex-shrink: 0;
+
+}
+
+.container{
+    display: flex;
+    gap: 5rem;
+    animation-name: scrollx;
+    animation-duration: 19s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.container h1{
+    cursor: pointer;
+}
+.container h1:hover{
+    color: red;
+}
+
+/* daily-news */
+
+.daily-news{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(116, 126, 126); */
+    height: 90%;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px    ;
+}
+
+.daily-news .news{
+    height: 22%;
+    width: 80%;
+    /* background-color: rgb(255, 183, 0); */
+    border-radius: 12px;
+    border: 2px solid aliceblue;
+    padding: 2rem;
+    cursor: pointer;
+    
+}
+.daily-news .news:hover{
+    border: 2px solid red;
+}
+.news .line1{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.news .line2 h2{
+    margin: 18px 0;
+}
+.news .line1,.line3 p{
+    font-size: 12px;
+} 
+
+.news .line1 .live{
+    height: 1.7rem;
+    width: 5rem;
+    background-color: rgb(237, 4, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+    @keyframes scrollx {
+        100% {
+          transform: translateX(calc(-100% - 1vw));
+        }
+    }
