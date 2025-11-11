@@ -8,57 +8,6 @@ body
     background-position: center;
     background-repeat: no-repeat;
     
-}\/* NAVBAR */
-
-.nav{
-    display: flex;
-    /* background-color: red; */
-    justify-content: center;
-    gap: 20rem;
-    padding: 15px 0;
-    height: 8%;
-    /* position: fixed; */
-}
-.nav .navs{
-    /* background-color: purple; */
-}
-.nav .navs a{
-    margin-right: 3rem;
-    text-decoration: none;
-    color: inherit;
-}
-.nav .navs a:hover,.logo h2:hover{
-    color:red;
-    transform: translateY(-4px);
-    transition: transform 220ms ease, color 180ms ease, text-shadow 220ms ease, letter-spacing 180ms ease;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
-
-/* underline base (hidden) */
-.nav .navs a::after,
-.logo h2::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  height: 2px;
-  width: 0;
-  background: red;
-  transition: width 220ms ease;
-  border-radius: 2px;
-}
-
-/* reveal underline on hover */
-.nav .navs a:hover::after,
-.logo h2:hover::after{
-  width: 100%;
-}
-
-
-.logo{
-
 }
 .top-bar {
     display: flex; 
@@ -162,129 +111,87 @@ color: #ffffff;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2em;
-    color : rgb(123, 6, 6);
+    color : rgb(200, 109, 225);
 
 }
 .gaming-card {
-            width: 380px; /* Fixed width as seen in the image */
-            background-color: #1a1a2e; /* Darker blue-purple background */
-            border-radius: 12px;
-            padding: 25px;
-            box-sizing: border-box;
-            position: relative;
-            
-            /* Initial border (non-hover) - subtle blue glow */
-            border: 2px solid transparent; /* Base for pseudo-element border */
-            box-shadow: 
-                0 0 10px rgba(0, 255, 255, 0.2), /* Subtle outer glow */
-                inset 0 0 5px rgba(0, 255, 255, 0.3); /* Inner subtle glow */
-            
-            transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out, transform 0.2s ease-out;
-        }
-
-        /* --- Hover Effect --- */
-        .gaming-card:hover {
-            transform: translateY(-5px); /* Lift effect */
-            /* Stronger, purple glow on hover */
-            box-shadow: 
-                0 0 15px rgba(255, 0, 255, 0.6), /* Pink outer glow */
-                0 0 30px rgba(255, 0, 255, 0.4), /* Wider pink glow */
-                inset 0 0 8px rgba(255, 0, 255, 0.5); /* Inner pink highlight */
-            border-color: #ff00ff; /* Purple border on hover */
-        }
-
-        /* --- Header / Title --- */
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .card-title {
-            font-size: 1.6em;
-            font-weight: 700;
-            color: #e0e0e0; /* Light white text */
-            letter-spacing: 0.05em;
-        }
-
-        /* --- Rating Star --- */
-        .rating {
-            background-color: #4a004a; /* Dark purple background for rating */
-            color: #ffd700; /* Gold star color */
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            border: 1px solid #7e007e; /* Slightly lighter purple border */
-        }
-
-        .rating::before {
-            content: '⭐'; /* Unicode star character */
-            font-size: 1em; /* Adjust star size */
-        }
-
-        /* --- Details (Address, Hours) --- */
-        .card-detail {
-            margin-bottom: 15px;
-            font-size: 1em;
-            display: flex;
-            align-items: baseline;
-        }
-
-        .detail-label {
-            color: #d070ff; /* Bright purple for labels */
-            font-weight: 400;
-            margin-right: 10px;
-            width: 70px; /* Align labels */
-            flex-shrink: 0;
-        }
-
-        .detail-value {
-            color: #e0e0e0; /* Light white text for values */
-        }
-
-        /* Separator Line */
-        .separator {
-            border-top: 1px solid #444; /* Dark gray line */
-            margin: 30px 0;
-        }
-
-        /* --- View Details Button --- */
-        .view-details-btn {
-            display: block; /* Make it a block-level element */
-            width: 100%;
-            padding: 15px;
-            background-color: #2a002a; /* Dark purple button background */
-            color: #d070ff; /* Bright purple text */
-            text-align: center;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            
-            /* Initial button glow */
-            border: 1px solid #8a008a; /* Purple border */
-            box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
-            
-            transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out, color 0.3s ease-out;
-        }
-
-        /* Button Hover Effect */
-        .gaming-card:hover .view-details-btn {
-            background-color: #4a004a; /* Slightly lighter purple on hover */
-            color: #ffffff; /* White text on hover */
-            box-shadow: 
-                0 0 15px rgba(255, 0, 255, 0.8), /* Stronger button glow */
-                0 0 25px rgba(255, 0, 255, 0.5);
-            border-color: #ff00ff; /* Brighter purple border */
-        }
-
-        /* Ensure font for the custom text (Address/Hours) also uses a modern, clean font if Orbitron is too bold */
-        .detail-label, .detail-value {
-             font-family: 'Inter', sans-serif; /* Or another clean sans-serif font */
-        }
+    width: 29%; 
+    background-color: #1a1a2e; 
+    padding: 25px;
+    position: relative;
+    border: 2px solid transparent; 
+    box-shadow:        
+    0 0 10px rgba(0, 255, 255, 0.2), 
+    inset 0 0 5px rgba(0, 255, 255, 0.3); 
+    transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out, transform 0.2s ease-out;
+}
+.gaming-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 
+    0 0 15px rgba(255, 0, 255, 0.6), 
+    0 0 30px rgba(255, 0, 255, 0.4), 
+    0 0 8px rgba(255, 0, 255, 0.5); 
+    border-color: #ff00ff; 
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.card-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #e0e0e0; 
+    letter-spacing: 0.05em;
+}
+.rating {
+    background-color: #4a004a;
+    color: #ffd700; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    border: 1px solid #7e007e; 
+}
+.card-detail {
+    margin-bottom: 15px;
+    font-size: 1em;
+    display: flex;
+    align-items: baseline;
+}
+.detail-label {
+    color: #d070ff; 
+    font-weight: 400;
+    margin-right: 10px;
+    width: 70px; 
+    flex-shrink: 0;
+}
+.detail-value {
+    color: #e0e0e0; 
+}
+.separator {
+border-top: 1px solid #ffffff;
+margin: 30px 0;
+}
+.view-details-btn {
+    display: block; 
+    width: 90%;
+    padding: 15px;
+    background-color: #2a002a; 
+    color: #d070ff; 
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #8a008a; 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+.detail-label, .detail-value {
+    font-family:cursive, sans-serif; 
+}
+.group{
+    display:flex;
+    gap:1em;
+}
