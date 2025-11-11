@@ -1,0 +1,241 @@
+body
+{
+    background: linear-gradient(
+    to bottom,
+    #000000 10%,
+    #000000 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.top-bar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 96%;
+    padding: 10px 20px;
+    background-color:#000000; /* Very dark background */
+    border-bottom: 5px solid #ffffff; /* Subtle purple border at the bottom */
+    position: sticky; /* Keeps the bar at the top when scrolling */
+    top: 0;
+    z-index: 100; /* Ensures the bar is always on top of other elements */
+}
+.logo a {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes the search bar slightly away from the logo */
+    margin-left: 15pt; /* Provides space between logo and search */
+}
+.search-input {
+    padding: 5px 5px;
+    border: 2px solid #ffffff;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    background-color: #ffffff;
+    color: #000000;
+    width: 300px;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #ffffff; /* Neon Pink focus highlight */
+}
+.search-button {
+    padding: 5px 5px;
+    border: 1px solid #ffffff;
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
+    background-color: #ffffff; /* Dark purple button */
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #806180; /* Neon Pink hover effect */
+}
+
+/* --- 4. Authentication Buttons Styling --- */
+.auth-links {
+    display: flex;
+    gap: 10px; /* Space between the Log In and Sign Up buttons */
+}
+
+.btn {
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+    color: #ffffff; /* Cyan text */
+    border: 1px solid #ffffff;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000; /* Dark text on hover */
+    transform: translateY(-1px);
+} 
+.heading{
+font-family: 'Press Start 2P'; 
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+}
+.tagline{
+text-align: center;
+font-family:'Audiowide'; 
+font-size: 10pt;
+color: #ffffff;
+}
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/audiowide/v22/l7gdbjpo0cum0ckerWCdlg_O.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.img{
+    width : 50pt;
+    border:5px solid #000000;
+    border-radius: 15%;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-img{
+    border-radius: 10px 10px 10px 10px;
+    width : 100%;
+    height :100%;
+}
+/* --- 1. Card Container and Base Styles --- */
+.event-card {
+    /* Main card size and appearance */
+    width: 350px;
+    background-color: #ffffff; /* Dark, slightly blue-ish background */
+    border-radius: 12px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    margin: 10px;
+    border: 2px solid #ffffff; /* Subtle edge border */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 15px 40px rgba(171, 126, 190, 0.7), 0 0 15px #7e548544; /* Add a subtle neon halo */
+    cursor: pointer;
+}
+
+/* --- 2. Card Header (Image Area) --- */
+.card-header {
+    height: 150px;
+    /* This uses a large image, so we set it as a background */
+    background-image: url('c:\Users\hp\Desktop\IICT Project\Gemini_Generated_Image_1xlrzr1xlrzr1xlr.png'); /* REPLACE with your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px;
+}
+
+/* Fallback/Example background for the CS2 Card */
+.card-header {
+    background-image: url('c:\Users\hp\Desktop\IICT Project\Gemini_Generated_Image_1xlrzr1xlrzr1xlr.png'); /* Placeholder image */
+    /* NOTE: You'll need to replace the URL above with a suitable background image */
+}
+
+
+/* --- 3. Event Tag (ESPORTS/LAN) --- */
+.event-tag {
+    position: sticky;
+    top: 10px;
+    left: 22px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.esports-tag {
+    color: #dea7de; /* Neon Pink text */
+    background-color: #4d1d4d; /* Dark purple/pink background */
+    border: 1px solid #ff00ff;
+}
+
+/* --- 4. Card Body and Title --- */
+.card-body {
+    padding: 20px 25px;
+}
+
+.event-title {
+    font-size: 1.5em;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* --- 5. Event Details (Icons and Text) --- */
+.event-detail {
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1em;
+    color: #726c6c; /* Light grey text for readability */
+}
+
+.event-detail .icon {
+    font-size: 1.1em;
+    color: #000000; /* Neon Cyan for the icons */
+    margin-right: 10px;
+}
+
+.event-detail .text {
+    /* Match the text style from the image */
+}
+
+/* --- 6. Click to Expand Link --- */
+.expand-link {
+    text-align: center;
+    color: #9999ff; /* Muted blue for the link */
+    font-size: 0.9em;
+    margin-top: 25px;
+    padding-top: 10px;
+    border-top: 1px dashed #333344;
+    cursor: pointer;
+}
+        /* --- CAROUSEL STRUCTURE CSS --- */
+        .carousel {
+            flex-shrink: 0;
+            margin: 5% auto;
+            width: 100%; /* Use 100% width of its container */
+            max-width: 1200px; /* Max width for aesthetics */
+            overflow: hidden; /* Hides the cards that are off-screen */
+            display: flex;
+            border-radius: 15px;
+        }
+
+        /* This is the container that holds the content and animates */
+        /* This is the container that holds the content and animates */
+        .group {
+            display: flex;
+            flex-direction: row; /* Ensure items are in a row */
+            white-space: nowrap; /* <-- CRITICAL FIX: Stops the cards from wrapping */
+            /* Calculate the total width of the content (6 cards + gaps) */
+            /* Crucial: Width must be 200% to hold the content and its duplicate */
+            width: 200%; 
+            align-items: center;
+            gap: 1em;
+            padding-right: 1em; /* Slightly increased gap for visual separation */
+            animation: spin 30s infinite linear; /* Slower speed for better viewing */
+        }
+
+        @keyframes spin {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); } /* Move exactly half of the 200% width (one set of cards) */
+        }
