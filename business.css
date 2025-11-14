@@ -1,0 +1,132 @@
+
+
+.btn {
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+    color: var(--text); /* Cyan text */
+    border: 1px solid var(--text);
+}
+
+.btn:hover {
+    background-color: var(--bg);
+    color: #000000; /* Dark text on hover */
+    transform: translateY(-1px);
+} 
+.heading{
+    font-family: 'Press Start 2P';  
+    font-size: 3em;
+    text-align: center;
+    color: var(--text);
+}
+.tagline{
+text-align: center;
+font-family: 'Audiowide'; 
+font-size: 10pt;
+color: var(--text);
+}
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/audiowide/v22/l7gdbjpo0cum0ckerWCdlg_O.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.img{
+    width : 50pt;
+    border:5px solid var(--bg);
+    border-radius: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.subheading{
+    font-family: 'Press Start 2P';  
+    text-align: center;
+    font-size: 2em;
+    color : rgb(200, 109, 225);
+
+}
+.gaming-card {
+    width: 29%; 
+    background-color: var(--bg); 
+    padding: 25px;
+    position: relative;
+    border: 2px solid transparent; 
+    box-shadow:        
+    0 0 10px rgba(0, 255, 255, 0.2), 
+    inset 0 0 5px rgba(0, 255, 255, 0.3); 
+    transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out, transform 0.2s ease-out;
+}
+.gaming-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 
+    0 0 15px rgba(255, 0, 255, 0.6), 
+    0 0 30px rgba(255, 0, 255, 0.4), 
+    0 0 8px rgba(255, 0, 255, 0.5); 
+    border-color: #ff00ff;                        
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.card-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--text); 
+    letter-spacing: 0.05em;
+}
+.rating {
+    background-color: #4a004a;
+    color: #ffd700; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    border: 1px solid #7e007e; 
+}
+.card-detail {
+    margin-bottom: 15px;
+    font-size: 1em;
+    display: flex;
+    align-items: baseline;
+}
+.detail-label {
+    color: #d070ff; 
+    font-weight: 400;
+    margin-right: 10px;
+    width: 70px; 
+    flex-shrink: 0;
+}
+.detail-value {
+    color: var(--text); 
+}
+.separator {
+border-top: 1px solid var(--bg);
+margin: 30px 0;
+}
+.view-details-btn {
+    display: block; 
+    width: 90%;
+    padding: 15px;
+    background-color: var(--bg); 
+    color: #d070ff; 
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #8a008a; 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+.detail-label, .detail-value {
+    font-family:cursive, sans-serif; 
+}
+.group{
+    display:flex;
+
+}

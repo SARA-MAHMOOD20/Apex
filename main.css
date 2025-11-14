@@ -1,0 +1,26 @@
+:root {
+  --bg: #ffffff;
+  --text: #191a1e;
+  --shadow: 0 4px 16px rgb(37, 37, 37);
+  --gg:rgba(169, 157, 157, 0.626);
+}
+html, body{
+    font-family: "Press Start 2P";
+    margin: 0;
+    padding: 0;
+}
+
+#toggle-color {
+  display: none;
+}
+#toggle-color:checked ~ .content-wrapper {
+  --bg: #141414; 
+  --text: #e3e3e3; 
+  --shadow: 0 4px 16px rgba(255, 255, 255, 0.08);
+}
+.content-wrapper {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh; /* Ensure it fills the screen */
+  
+}

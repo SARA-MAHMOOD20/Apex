@@ -1,0 +1,86 @@
+
+.nav{
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    gap: 20rem;
+    padding: 15px 0;
+    height: 8vh;
+    /* position: fixed; */
+}
+
+.nav .navs a{
+    margin-right: 3rem;
+    text-decoration: none;
+    color: inherit;
+    color:var(--text);
+    position: relative;
+}
+.nav .navs a:hover,.logo h2:hover{
+    color:red;
+    transform: translateY(-4px);
+    transition: transform 220ms ease, color 180ms ease, text-shadow 220ms ease, letter-spacing 180ms ease;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+/* underline base (hidden) */
+.nav .navs a::after,
+.logo h2::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: red;
+  transition: width 220ms ease;
+  border-radius: 2px;
+}
+
+/* reveal underline on hover */
+.nav .navs a:hover::after,
+.logo h2:hover::after{
+  width: 100%;
+}
+
+.nav .navs a svg{
+  fill: var(--text);
+}
+
+#toggle-color{
+  display: none;
+}
+
+.theme-toggle {
+  cursor: pointer;
+
+  text-decoration: none;
+  color: var(--text);
+  display: inline-block; 
+}
+
+.theme-toggle:hover {
+    transform: none; 
+    color: var(--text);
+}
+.theme-toggle::after {
+    display: none; 
+}
+.theme-toggle svg {
+  fill: var(--text); 
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+.sun-icon { display: none; }
+.moon-icon { display: block; }
+
+#toggle-color:checked ~ .content-wrapper .moon-icon {
+    display: none;
+}
+#toggle-color:checked ~ .content-wrapper .sun-icon {
+    display: block;
+}
+
