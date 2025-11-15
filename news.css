@@ -1,3 +1,15 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+}
+
+.nav-logo {
+    width: 40px;      /* adjust size */
+    height: 40px;
+    object-fit: contain;
+}
+
 /* VIDEO SECTION */
 .video {
     height: 92vh;
