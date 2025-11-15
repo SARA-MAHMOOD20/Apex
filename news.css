@@ -1,52 +1,50 @@
-/* VIEDO */
-
-.video{
+/* VIDEO SECTION */
+.video {
     height: 92vh;
     width: 100%;
-    /* background-color: rgb(0, 104, 104); */
     position: relative;
 }
 
 /* Video sizing */
-.video .game{
+.video .game {
     height: 100%;
     width: 100%;
 }
-.video .game video{
+
+.video .game video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* overlay */
-
-.overlay{
+/* Overlay */
+.overlay {
     position: absolute;
     bottom: 17rem;
-    left:21%
+    left: 21%;
 }
 
-.over1{
+.over1 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10rem;
-    
-    /* background-color: burlywood;  */
-
 }
-.overlay .over1 h1{
+
+.overlay .over1 h1 {
     font-size: 4rem;
     cursor: pointer;
-    color:var(--text);
-    
+    color: var(--text);
+    transition: color 0.3s ease;
 }
-.overlay .over1 h1:hover{
+
+.overlay .over1 h1:hover {
     color: red;
 }
-.scroll{
-    /* background-color: pink; */
+
+/* Scrolling text */
+.scroll {
     padding: 20px 0;
     width: 100%;
     display: flex;
@@ -56,10 +54,9 @@
     white-space: nowrap;
     gap: 5rem;
     flex-shrink: 0;
-
 }
 
-.container{
+.container {
     display: flex;
     gap: 5rem;
     animation-name: scrollx;
@@ -67,19 +64,20 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.container h1{
+
+.container h1 {
     cursor: pointer;
+    transition: color 0.3s ease;
 }
-.container h1:hover{
+
+.container h1:hover {
     color: red;
 }
 
-/* daily-news */
-
-.daily-news{
+/* Daily News */
+.daily-news {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(116, 126, 126); */
     height: 90%;
     width: 100%;
     align-items: center;
@@ -88,33 +86,37 @@
     margin-top: 20px;
 }
 
-.daily-news .news{
+.daily-news .news {
     height: 22%;
     width: 80%;
-    /* background-color: rgb(255, 183, 0); */
     border-radius: 12px;
     border: 2px solid aliceblue;
     padding: 2rem;
     cursor: pointer;
-    
+    transition: border 0.3s ease;
 }
-.daily-news .news:hover{
+
+.daily-news .news:hover {
     border: 2px solid red;
 }
-.news .line1{
+
+.news .line1 {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.news .line2 h2{
+.news .line2 h2 {
     margin: 18px 0;
 }
-.news .line1,.line3 p{
-    font-size: 12px;
-} 
 
-.news .line1 .live{
+.news .line1 p,
+.news .line3 p {
+    font-size: 12px;
+}
+
+.news .line1 .live {
     height: 1.7rem;
     width: 5rem;
     background-color: rgb(237, 4, 42);
@@ -123,10 +125,205 @@
     align-items: center;
     border-radius: 20px;
     font-size: 10px;
+    flex-shrink: 0;
 }
 
 @keyframes scrollx {
     100% {
-      transform: translateX(calc(-100% - 1vw));
+        transform: translateX(calc(-100% - 1vw));
+    }
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Large Tablets and Small Laptops (1024px) */
+@media (max-width: 1024px) {
+    .overlay {
+        bottom: 12rem;
+        left: 15%;
+    }
+
+    .overlay .over1 h1 {
+        font-size: 3.5rem;
+    }
+
+    .daily-news .news {
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    .news .line2 h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+    .video {
+        height: 70vh;
+    }
+
+    .overlay {
+        bottom: 8rem;
+        left: 10%;
+        right: 10%;
+    }
+
+    .over1 {
+        height: 8rem;
+    }
+
+    .overlay .over1 h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .scroll {
+        padding: 15px 0;
+        gap: 3rem;
+    }
+
+    .container {
+        gap: 3rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .daily-news {
+        margin-top: 15px;
+        gap: 12px;
+    }
+
+    .daily-news .news {
+        width: 90%;
+        height: auto;
+        min-height: 150px;
+        padding: 1.5rem;
+    }
+
+    .news .line1 {
+        gap: 10px;
+    }
+
+    .news .line2 h2 {
+        font-size: 1.2rem;
+        margin: 15px 0;
+    }
+
+    .news .line1 p,
+    .news .line3 p {
+        font-size: 11px;
+    }
+
+    .news .line1 .live {
+        height: 1.5rem;
+        width: 4.5rem;
+        font-size: 9px;
+    }
+}
+
+/* Mobile Phones (480px) */
+@media (max-width: 480px) {
+    .video {
+        height: 50vh;
+    }
+
+    .overlay {
+        bottom: 5rem;
+        left: 5%;
+        right: 5%;
+    }
+
+    .over1 {
+        height: 6rem;
+    }
+
+    .overlay .over1 h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .scroll {
+        padding: 10px 0;
+        gap: 2rem;
+    }
+
+    .container {
+        gap: 2rem;
+        animation-duration: 15s;
+    }
+
+    .container h1 {
+        font-size: 1.2rem;
+    }
+
+    .daily-news {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .daily-news .news {
+        width: 95%;
+        height: auto;
+        min-height: 130px;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .news .line1 {
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news .line2 h2 {
+        font-size: 1rem;
+        margin: 12px 0;
+        line-height: 1.4;
+    }
+
+    .news .line1 p,
+    .news .line3 p {
+        font-size: 10px;
+    }
+
+    .news .line1 .live {
+        height: 1.4rem;
+        width: 4rem;
+        font-size: 8px;
+    }
+}
+
+/* Extra Small Devices (360px) */
+@media (max-width: 360px) {
+    .video {
+        height: 40vh;
+    }
+
+    .overlay {
+        bottom: 3rem;
+        left: 3%;
+        right: 3%;
+    }
+
+    .overlay .over1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .container h1 {
+        font-size: 1rem;
+    }
+
+    .daily-news .news {
+        width: 98%;
+        padding: 0.8rem;
+    }
+
+    .news .line2 h2 {
+        font-size: 0.9rem;
+        margin: 10px 0;
     }
 }
