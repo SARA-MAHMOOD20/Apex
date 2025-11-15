@@ -1,4 +1,3 @@
-
 /* HERO SECTION */
 .hero {
     height: 100vh;
@@ -9,6 +8,28 @@
     position: relative;
     z-index: 10;
     padding: 0 20px;
+
+    /* FULL PAGE BACKGROUND IMAGE */
+    background-image: url("pics/back.jpg"); /* <--- PUT YOUR IMAGE PATH HERE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Makes it stay still while scrolling */
+}
+
+/* DARK OVERLAY FOR HERO */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* Overlay, can adjust opacity */
+    z-index: 1;
+}
+
+/* Bring hero text above overlay */
+.welcome-text {
+    position: relative;
+    z-index: 2;
 }
 
 .welcome-text h1 {
